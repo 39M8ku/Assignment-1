@@ -3,12 +3,19 @@
  */
 package Assignment_1;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.io.*;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        DeliveryFactory deliveryFactory = new DeliveryFactory();
+
+        Delivery method1 = deliveryFactory.getDelivery("Sea");
+        method1.name();
+
+        Delivery method2= deliveryFactory.getDelivery("Ground");
+        method2.name();
+
+        Delivery method3 = deliveryFactory.getDelivery("Air");
+        method3.name();
     }
 }
